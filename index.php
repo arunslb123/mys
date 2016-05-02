@@ -30,7 +30,7 @@
     $host = "us-cdbr-azure-southcentral-e.cloudapp.net";
     $user = "b5e6932691e7ad";
     $pwd = "431dfc7a";
-    $db = "DefaultMySQL";
+    $db = "acsm_4729051611eebc5";
     // Connect to database.
     try {
         $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
