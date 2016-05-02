@@ -27,10 +27,10 @@
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
     //using the values you retrieved earlier from the Azure Portal.
-    $host = "arunplay.database.windows.net";
-    $user = "arunuq";
-    $pwd = "prakashuq@1";
-    $db = "arunplay";
+    $host = "us-cdbr-azure-southcentral-e.cloudapp.net";
+    $user = "b5e6932691e7ad";
+    $pwd = "431dfc7a";
+    $db = "DefaultMySQL";
     // Connect to database.
     try {
         $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
@@ -79,9 +79,4 @@
         echo "<h3>No one is currently registered.</h3>";
     }
 ?>
-</body>
-<<<<<<< HEAD
-</html>
-=======
-</html>
->>>>>>> 64294a6ad691f73eb3b208e0786e7318753820b7
+
