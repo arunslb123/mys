@@ -44,14 +44,13 @@
     try {
         $name = $_POST['name'];
         $email = $_POST['email'];
-        $date = date("Y-m-d");
+        
         // Insert data
-        $sql_insert = "INSERT INTO registration_tbl (name, email, date)
-                   VALUES (?,?,?)";
+        $sql_insert = "INSERT INTO registration_tbl (name, email)
+                   VALUES (?,?)";
         $stmt = $conn->prepare($sql_insert);
         $stmt->bindValue(1, $name);
         $stmt->bindValue(2, $email);
-        $stmt->bindValue(3, $date);
         $stmt->execute();
     }
     catch(Exception $e) {
@@ -68,11 +67,9 @@
         echo "<table>";
         echo "<tr><th>Name</th>";
         echo "<th>Email</th>";
-        echo "<th>Date</th></tr>";
         foreach($registrants as $registrant) {
             echo "<tr><td>".$registrant['name']."</td>";
             echo "<td>".$registrant['email']."</td>";
-            echo "<td>".$registrant['date']."</td></tr>";
         }
         echo "</table>";
     } else {
